@@ -1,0 +1,145 @@
+library(corrplot)
+library(readODS)
+library(dplyr)
+library(tidyverse)
+library(MASS)
+library(ggplot2)
+library(Rtsne)
+
+
+set.seed(123)
+
+original_data <- read_ods("D:/Downloads/wdbc.ods", col_names = FALSE)
+
+
+colnames(original_data) <- c("ID", "Diagnosis", "radius_mean", "texture_mean", "perimeter_mean", "area_mean", "smoothness_mean",
+                    "compactness_mean", "concavity_mean", "concave_points_mean", "symmetry_mean", "fractal_dimension_mean",
+                    "radius_se", "texture_se", "perimeter_se", "area_se", "smoothness_se", "compactness_se", "concavity_se",
+                    "concave_points_se", "symmetry_se", "fractal_dimension_se", "radius_worst", "texture_worst", 
+                    "perimeter_worst", "area_worst", "smoothness_worst", "compactness_worst", "concavity_worst",
+                    "concave_points_worst", "symmetry_worst", "fractal_dimension_worst")
+
+original_data_qda <-original_data
+original_data_pca <- original_data
+original_data_tdsne <- original_data
+
+
+
+df_malignant <- original_data[original_data$Diagnosis == "M",]
+df_benign <-original_data[original_data$Diagnosis == "B",] 
+
+df_malignant$Diagnosis <- NULL
+
+df_benign$Diagnosis <- NULL
+
+summary(df_malignant)
+summary(df_benign)
+
+### Correlation Matrices
+corrplot(cor(df_malignant), order='alphabet')
+corrplot(cor(df_benign), order='alphabet')
+
+
+#Linear Discriminant Analysis
+
+original_data$cancer <- as.numeric(original_data$Diagnosis == "M")
+original_data$ID <- NULL
+
+original_data$Diagnosis <- NULL
+
+original_data[1:31] <- scale(original_data[1:31])
+
+means <- apply(original_data[1:31], 2, mean)
+
+sds <- apply(original_data[1:31], 2, sd)
+
+sample <- sample(c(TRUE, FALSE), nrow(original_data), replace=TRUE, prob=c(0.7,0.3))
+train <- original_data[sample, ]
+test <- original_data[!sample, ] 
+
+model <- lda(cancer~., data = train)
+
+model
+
+predicted <- predict(model, test)
+
+names(predicted)
+
+head(predicted$class)
+
+accuracy <- mean(predicted$class == test$cancer)
+print(accuracy)
+
+# Quadratic Discriminant Analysis
+
+original_data_qda$cancer <- as.numeric(original_data_qda$Diagnosis == "M")
+
+original_data_qda$ID <- NULL
+original_data_qda$Diagnosis <- NULL
+
+sample <- sample(c(TRUE, FALSE), nrow(original_data_qda), replace=TRUE, prob=c(0.7,0.3))
+train <- original_data_qda[sample, ]
+test <- original_data_qda[!sample, ] 
+
+model <-qda(cancer~., data = train)
+model
+
+predicted <- predict(model,test)
+
+names(predicted)
+head(predicted$class)
+accuracy <- mean(predicted$class==test$cancer)
+print(accuracy)
+
+#Principal Component Analysis
+
+original_data_pca$cancer <- as.numeric(original_data_pca$Diagnosis == "M")
+
+original_data_pca$ID <- NULL
+original_data_pca$Diagnosis <- NULL
+
+results <- prcomp(original_data_pca, scale = TRUE) 
+
+results$rotation <- -1*results$rotation
+results$rotation
+
+results$x <- -1* results$x
+results$x
+
+biplot(results, scale = 0)
+
+head(original_data_pca[order(-original_data_pca$cancer),])
+
+results$sdev^2/sum(results$sdev^2)
+
+
+var_explained = results$sdev^2 / sum(results$sdev^2)
+
+qplot(c(1:31), var_explained) + 
+  geom_line() + 
+  xlab("Principal Component") + 
+  ylab("Variance Explained") +
+  ggtitle("Scree Plot") +
+  ylim(0, 1)
+
+
+# t-distributed stochastic neighbour embedding
+set.seed((123))
+original_data_tdsne$cancer <- as.numeric(original_data_tdsne$Diagnosis == "M")
+original_data_tdsne$ID <- NULL
+original_data_tdsne$Diagnosis <- NULL
+
+# Run t-SNE
+tsne_results <- Rtsne(original_data_tdsne[, -ncol(original_data_tdsne)], dims = 2, perplexity = 50, verbose = TRUE, max_iter = 1000)
+
+# Plot the t-SNE results
+plot(tsne_results$Y, col = as.factor(original_data_tdsne$cancer), 
+     pch = 19, xlab = "t-SNE 1", ylab = "t-SNE 2", 
+     main = "t-SNE Visualization of Breast Cancer Dataset")
+legend("topright", legend = c("Benign", "Malignant"), col = 1:2, pch = 19)
+
+
+
+
+
+

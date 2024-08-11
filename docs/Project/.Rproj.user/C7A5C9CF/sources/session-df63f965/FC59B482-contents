@@ -1,0 +1,37 @@
+---
+title: "Projects"
+output: 
+  html_document:
+    code_folding: hide
+    fig_width: 7
+    fig_height: 6
+    fig_captions: true
+    theme: darkly
+    highlight: default
+    toc: False
+    number_sections: False
+---
+
+# Projects
+
+Explore my data science projects categorized by technology and focus area.
+
+## R Specific Projects
+
+### [Project 1: Breast Cancer Wisconsin Dataset](Breast-Cancer-Wisconsin-Dataset.html)
+- **Description**: Briefly describe the project.
+- **Technologies**: R, ggplot2, dplyr
+
+### [Project 2: Project Title](Project2.html)
+- **Description**: Briefly describe the project.
+- **Technologies**: R, Shiny
+
+## Python Specific Projects
+
+### [Project 3: Project Title](Project3.html)
+- **Description**: Briefly describe the project.
+- **Technologies**: Python, scikit-learn
+
+... and so on for other categories and projects.
+
+

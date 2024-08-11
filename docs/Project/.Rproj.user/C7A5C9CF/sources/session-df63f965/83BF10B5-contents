@@ -1,0 +1,71 @@
+---
+title: "Breast Cancer Wisconsin Diagnostic Dataset"
+output: 
+  html_document:
+    code_folding: hide
+    fig_width: 7
+    fig_height: 6
+    fig_captions: true
+    theme: darkly
+    highlight: default
+    toc: False
+    number_sections: False
+---
+
+
+
+# Project 1: [Project Title]
+
+## Overview
+- **Description**: This project involved the use of the Breast Cancer Wisconsin (Diagnostic) dataset available from the UC Irvine Machine Learning Repository http://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic. 
+
+As a relatively small dataset, with only 569 cases and 30 features, this project involved some basic Exploratory Data Analysis. These Exploratory Data Analysis(EDA) processes were: Correlation Matrices, Linear Discriminant Analysis, Quadratic Discriminant Analysis, Principle Component Analysis and T-Distributed Stochastic Neighbour Embedding.  
+
+The purpose of this project was to gain a basic understanding of which variables are the most important to determine if cancer is malignant or benign. In order to understand which variables are the most important, two binary classification models were used to differentiate between malignant or benign cases. These binary classification models were Linear Discriminant Analysis (LDA) and Quadratic Discriminant Analysis (QDA).
+
+
+
+## Methodology
+- **Technologies**: There were various packages used throughout this Exploratory Data Analysis(EDA) of the Breast Cancer Wisconsin data including: corrplot, readODS, dplyr, tidyverse, MASS, ggplot2 and Rtsne.     
+  
+- **Methods**: It is important to note that some of the columns from the original dataset where modified. These two examples where when the ID number was removed as it failed to provide additional benefit to Exploratory Data Analysis and the diagnosis column was converted to a binary column, where malignant was classified as 1 and benign was 0. In conjunction with this, the malignant/benign column was used as an additional variable in order to perform Exploratory Data Analysis.   
+
+This project involved creating Correlation Matrices to recognise which variables have the strongest correlations between other variables. To perform LDA, the variables were scaled, along with the averages(mean) and standard deviations taken. For both LDA and QDA, the training-testing split was at 70% training versus 30% testing. 
+
+
+
+
+## Results
+- **Key Findings**: When creating the correlation matrices, there was a lot of overlap between the same variable, thus resulting in multicolinearity. Due to this, other data science/ statistical techniques were used instead such as Principle Component Analysis and T-distributed stochastic Neighbour Embedding.
+
+
+
+## Correlation Benign Heatmap
+![](images/correlation_matrix_benign.png)
+
+## Correlation Malignant Heatmap
+![](images/correlation_matrix_malignant.png)
+
+
+
+
+- **Visualizations**: Include any plots, graphs, or other visual representations of your data.
+
+
+
+
+
+
+
+
+
+
+## Conclusion
+- **Takeaways**: Highlight the key contributions and potential implications of the project.
+- **Future Work**: Mention any future directions or extensions of the work.
+
+## References
+- Include references or links to any data sources, papers, or other resources you used.
+
+
+rmarkdown::render()
