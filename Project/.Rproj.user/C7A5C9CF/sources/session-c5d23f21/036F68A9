@@ -1,0 +1,27 @@
+{
+    "id": "036F68A9",
+    "path": "D:/NathanielPyle.github.io/wine_regression.R",
+    "project_path": null,
+    "type": "r_source",
+    "hash": "0",
+    "contents": "",
+    "dirty": true,
+    "created": 1723795485510.0,
+    "source_on_save": false,
+    "relative_order": 10,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "506,29",
+        "scrollLine": "490",
+        "ignored_words": "penalises,prioritised,minimised\n"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1724731714,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1724884473810,
+    "read_only": false,
+    "read_only_alternatives": []
+}

@@ -1,0 +1,12 @@
+name: "Nathaniel Pyle Website"
+output_dir: "docs"
+navbar:
+  title: "Nathaniel Pyle"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Projects"
+      href: project.html
+    - text: "About Myself"
+      href: aboutme.html
+

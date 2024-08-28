@@ -1,0 +1,70 @@
+---
+title: "Wine Quality Dataset"
+output: 
+  html_document:
+    code_folding: hide
+    fig_width: 7
+    fig_height: 6
+    fig_captions: true
+    theme: darkly
+    highlight: default
+    toc: False
+    number_sections: False
+---
+
+## Overview
+- **Description**: The quality of wine is determined by various features that relate to its taste, aroma, and other characteristics familiar to wine experts. The UC Irvine Wine Dataset, available at [UC Irvine Wine Dataset](https://archive.ics.uci.edu/dataset/186/wine+quality), c consists of two datasets: one for white wine and one for red wine. These datasets evaluate wine quality using physicochemical tests and sensory variables, focusing on the red and white variants of Portuguese Vinho Verde wine.
+
+The dataset includes 11 features and one dependent variable, the wine quality score. The features, which are based on physicochemical inputs and sensory data, include: fixed acidity, volatile acidity, citric acid, residual sugar, chlorides, free sulphur dioxide, total sulphur dioxide, density, pH, sulphates, and alcohol. These measurements were taken based on sensory evaluations, with a median score determined from at least three wine experts' assessments.
+
+Each expert graded the wine samples on a scale from 0 (very bad) to 10 (excellent). Due to privacy and logistical constraints, only physicochemical inputs and sensory outputs are available in this dataset. No information about grape type, wine brand, or other confounding variables is provided.
+
+Notably, the dataset contains no missing data.
+
+The aim of this project was to identify the key variables that influence wine quality. To achieve this, various data science techniques were applied, including correlation matrices, subset selection, model evaluation, stepwise selection, validation and cross-validation using K-folds, as well as Ridge and Lasso regression.
+
+## Methodology
+
+- **Technologies**: the packages that were used in this project were `corrplot`, `readODS`, `ISLR`, `leaps`, and `glmnet`. 
+
+
+- **Methods**: the columns in both datasets were assigned names from the source and the read.me file. In the early stages of this project, correlation matrices were created to uncover any basic correlations between variables. To no avail, these correlation matrices provided little information about which variables were the most important, or the nature of the data itself. Therefore, more technical techniques were required to analyse the data itself. 
+
+Proceeding this, subset selection was used to analyse the coefficient of determination or correlation between different models by incrementally adding more variables. Plots were generated to show correlation on the y-axis, and the number of variables on the x-axis. These plots indicate that as more variables are added, the R-squared value increases, meaning the model explains more variance. However, there is a point of diminishing returns where adding additional variables no longer significantly improves the model's explanatory power. If all variables were added to the model, this would cause the accuracy to increase but the model would be overfitting. Interestingly, both datasets demonstrate this point of diminishing returns.
+
+Four plots were created to show the number of variables against Correlation, Adjusted-Correlation, Mallow's Cp, and Bayesian Information Criterion. An interception point is placed at the optimal location for all plots with the exception of the Correlation plot. 
+
+
+## Results
+
+Subset Selection
+The results from the white wine dataset were: 0.1897253 0.2402312 0.2585262 0.2639942 0.2710732 0.2766578 0.2801196 0.2817520 0.2818353 0.2818625 0.2818704.
+In comparison the results for the red wine dataset were: 0.2267344 0.3170024 0.3358973 0.3437824 0.3514942 0.3571736 0.3594709 0.3599265
+0.3601728 0.3602764 0.3605517. 
+
+
+The Adjusted R-squared plot shows the variability in the response variable. It is important to note that the model adjusts for the number of predictor variables and penalises multicollinearity. The threshold appears to be around 8 variables, after which any further increase in Adjusted R-squared becomes minimal, indicating that additional variables contribute little to improving the model.
+
+The Mallow's Cp plot strikes a balance between the number of variables and the variance. The lowest Cp value is reached with 8 variables, suggesting this is the optimal number. Beyond this point, additional variables offer little benefit and can be discarded.
+
+The Bayesian Information Criterion (BIC) plot further supports this conclusion. BIC penalises models that are overly complex, favouring simpler, more parsimonious ones. This plot also suggests that a model with 8 variables achieves the most efficient balance between complexity and performance.
+
+When applying this reasoning to the red wine dataset, similar patterns emerge, though with some differences. The Adjusted R-squared still points towards 8 variables, but Mallow's Cp and BIC suggest slightly fewer—7 and 6 variables. This indicates some similarity between the datasets, while also highlighting that the red wine dataset requires fewer variables for an optimal balance between bias, variance, and complexity.
+
+## Visualisations
+
+## Citation 
+As requested by the authors of this dataset, they requested this citation be used. 
+
+P. Cortez, A. Cerdeira, F. Almeida, T. Matos and J. Reis. 
+  Modeling wine preferences by data mining from physicochemical properties.
+  In Decision Support Systems, Elsevier, 47(4):547-553. ISSN: 0167-9236.
+
+## Further links
+For further links please access the following url. 
+
+[Modeling wine preferences by data mining from physicochemical properties](http://dx.doi.org/10.1016/j.dss.2009.05.016)
+                
+                
+
+
