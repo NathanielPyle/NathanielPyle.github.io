@@ -393,8 +393,8 @@ mean.csv.errors
 par(mfrow=c(1,1))
 plot(mean.csv.errors, type = 'b')
 
-regfit.best_red = regsubsets(quality~., data = red_wine, nvmax= 6)
-coef(regfit.best_red,6)
+regfit.best_red = regsubsets(quality~., data = red_wine, nvmax= 7)
+coef(regfit.best_red,7)
 
 #ridge and lasso regression
 

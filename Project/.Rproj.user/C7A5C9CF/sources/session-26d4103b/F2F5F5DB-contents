@@ -1,0 +1,37 @@
+---
+title: "Projects"
+output: 
+  html_document:
+    code_folding: hide
+    fig_width: 7
+    fig_height: 6
+    fig_captions: true
+    theme: darkly
+    highlight: default
+    toc: False
+    number_sections: False
+---
+
+# Projects
+
+Explore my data science projects categorized by technology and focus area.
+
+## R Specific Projects
+
+### [Breast Cancer Wisconsin Dataset](Breast-Cancer-Wisconsin-Dataset.html)
+- **Description**: This project involved Exploratory Data Analysis (EDA) using the Breast Cancer Wisconsin (Diagnostic) dataset available from the [UC Irvine Machine Learning Repository](http://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic). 
+- **Technologies**: `R`, `corrplot`, `readODS`, `dplyr`, `tidyverse`, `MASS`, `ggplot2`, and `Rtsne`
+
+### [Portuguese Vinho Verde wine quality dataset](wine_quality.html)
+- **Description**: This project involved the use of the UC Irvine Wine Dataset, available at [UC Irvine Wine Dataset](https://archive.ics.uci.edu/dataset/186/wine+quality), to explore the most important variables in determining wine quality. 
+- **Technologies**: `corrplot`, `readODS`, `ISLR`, `leaps`, and `glmnet`
+
+## Python Specific Projects
+
+### [Project 3: Project Title](Project3.html)
+- **Description**: Briefly describe the project.
+- **Technologies**: Python, scikit-learn
+
+... and so on for other categories and projects.
+
+
