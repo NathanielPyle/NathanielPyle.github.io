@@ -33,5 +33,5 @@ Explore my data science projects categorised by topic and technology.
 [Palmer Penguins](https://github.com/allisonhorst/palmerpenguins). The purpose of this project was to explore the body weights of penguins depending on specific conditions including: where they live, their sex and what species they are.
 - **Technologies**: `Python`, `Pandas`, `Matplotlib` and `Seaborn`
 
-rmarkdown::render("project.rmd")
+
 

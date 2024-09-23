@@ -99,3 +99,5 @@ For more information about the Pandas and Matplotlib packages please access the 
 [Pandas library](https://pandas.pydata.org/docs/index.html)
 
 [Matplotlib library](https://matplotlib.org/) 
+
+rmarkdown::render("penguins_dataset_python.Rmd")

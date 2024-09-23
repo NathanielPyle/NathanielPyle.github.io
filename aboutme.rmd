@@ -39,3 +39,5 @@ Please feel free to have a look at my github repository [NathanielPyle](https://
 
 If you would like to contact me about my work or anything Data Science related, 
 please feel free to flick me an email at nathaniel.pyle110@gmail.com. 
+
+rmarkdown::render("aboutme.rmd")
