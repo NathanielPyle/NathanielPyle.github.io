@@ -1,0 +1,16 @@
+# Ignore system files
+*.DAT
+*.blf
+*.regtrans-ms
+*.ini
+*.LOG1
+*.LOG2
+
+# Ignore Git configuration files
+.gitconfig
+.gitconfig.png
+
+# Ignore system directories
+AppData/
+IntelGraphicsProfiles/
+OneDrive/
