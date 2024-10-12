@@ -30,7 +30,7 @@ Explore my data science projects categorised by topic and technology.
 
 ### [Palmer Penguin Dataset Visualisation](penguins_dataset_python.html)
 - **Description**: This project involved the exploration fo the Palmer Penguins dataset available at
-[Palmer Penguins](https://github.com/allisonhorst/palmerpenguins). The purpose of this project was to explore the body weights of penguins depending on specific conditions including: where they live, their sex and what species they are.
+[Palmer Penguins](https://github.com/allisonhorst/palmerpenguins). The purpose of this project was to explore the body weights of penguins depending on specific conditions including: where they lived, their sex and what species they were.
 - **Technologies**: `Python`, `Pandas`, `Matplotlib` and `Seaborn`
 
 ### [Titanic Dataset Visualisation](Titanic.html)
