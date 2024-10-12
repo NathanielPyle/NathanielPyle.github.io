@@ -33,5 +33,9 @@ Explore my data science projects categorised by topic and technology.
 [Palmer Penguins](https://github.com/allisonhorst/palmerpenguins). The purpose of this project was to explore the body weights of penguins depending on specific conditions including: where they live, their sex and what species they are.
 - **Technologies**: `Python`, `Pandas`, `Matplotlib` and `Seaborn`
 
+### [Titanic Dataset Visualisation](Titanic.html)
+- **Description**: This project utilised the Titanic dataset available at [Titanic Kaggle](https://www.kaggle.com/c/titanic/overview) and [Data Science Dojo Github](https://github.com/datasciencedojo/datasets/blob/master/titanic.csv), to discover which variables were the most important in determining passenger survival, such as `Passenger Fare`, `Number of Siblings/Spouses Aboard` and `Age`.       
+- **Technologies**: `Python`, `Pandas`, `Matplotlib`, `Numpy` and `Seaborn`
+
 
 

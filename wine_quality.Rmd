@@ -193,6 +193,8 @@ P. Cortez, A. Cerdeira, F. Almeida, T. Matos and J. Reis.
 For further links please access the following url. 
 
 [Modeling wine preferences by data mining from physicochemical properties](http://dx.doi.org/10.1016/j.dss.2009.05.016)
+
+rmarkdown::render("wine_quality.Rmd")
                 
                 
 
