@@ -37,5 +37,5 @@ Explore my data science projects categorised by topic and technology.
 - **Description**: This project utilised the Titanic dataset available at [Titanic Kaggle](https://www.kaggle.com/c/titanic/overview) and [Data Science Dojo Github](https://github.com/datasciencedojo/datasets/blob/master/titanic.csv), to discover which variables were the most important in determining passenger survival, such as `Passenger Fare`, `Number of Siblings/Spouses Aboard` and `Age`.       
 - **Technologies**: `Python`, `Pandas`, `Matplotlib`, `Numpy` and `Seaborn`
 
-
+rmarkdown::render("project.rmd")
 

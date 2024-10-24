@@ -1,5 +1,5 @@
 ---
-title: "About myself"
+title: "About Myself"
 output:
   html_document:
     code_folding: hide
@@ -29,15 +29,16 @@ Bachelor of Arts in English from the University of Canterbury 2016
 ## Personal Interests
 
 Some of my personal interests include chess, judo and physical fitness. I enjoy
-integrating my personal interests with my passion for Data Science, such as 
-analysing specific patterns in chess using specified machine learning algorithms 
-to learn. 
+using my skills as a Data Scientist to investigate topics which interest me such
+as Cancer, Wine and anything else which catches my eye.
 
 Please feel free to have a look at my github repository [NathanielPyle](https://github.com/NathanielPyle/NathanielPyle.github.io)
 
 ## Contact Details
 
 If you would like to contact me about my work or anything Data Science related, 
-please feel free to flick me an email at nathaniel.pyle110@gmail.com. 
+please feel free to flick me an email at nathaniel.pyle110@gmail.com or message 
+me on linkedin https://www.linkedin.com/in/nathaniel-pyle-29a91a253/ .
+
 
 rmarkdown::render("aboutme.rmd")
