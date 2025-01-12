@@ -102,4 +102,25 @@ New.series <- window(Global.ts, start = c(1970,1), end = c(2005,12))
 New.time <-time(New.series)
 plot(New.series); abline(reg = lm(New.series ~ New.time))
 
+plot(decompose(Elec.ts))
+Elec.decom <- decompose(Elec.ts, type = "multi")
+plot(Elec.decom)
 
+
+Trend <- Elec.decom$trend
+Seasonal <- Elec.decom$seasonal
+ts.plot(cbind(Trend, Trend * Seasonal), lty = 1:2)
+
+www <- "https://raw.githubusercontent.com/dallascard/Introductory_Time_Series_with_R_datasets/refs/heads/master/Herald.dat"
+Herald.dat <- read.table(www, header = T)
+attach(Herald.dat)
+
+x <- CO; y <- Benzoa; n <- length(x)
+sum((x - mean(x))*(y - mean(y))) / (n-1) 
+
+mean((x - mean(x)) * (y - mean(y)))
+
+cov(x, y)
+cov(x, y)/ (sd(x)* sd(y))
+    
+cor(x,y)

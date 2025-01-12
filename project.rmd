@@ -37,5 +37,15 @@ Explore my data science projects categorised by topic and technology.
 - **Description**: This project utilised the Titanic dataset available at [Titanic Kaggle](https://www.kaggle.com/c/titanic/overview) and [Data Science Dojo Github](https://github.com/datasciencedojo/datasets/blob/master/titanic.csv), to discover which variables were the most important in determining passenger survival, such as `Passenger Fare`, `Number of Siblings/Spouses Aboard` and `Age`.       
 - **Technologies**: `Python`, `Pandas`, `Matplotlib`, `Numpy` and `Seaborn`
 
+
+## Geospatial Specific Projects
+
+
+### [Top Ten Earthquakes of 2024 and Nuclear Power Stations](earthquakes_powerplants.html)
+- **Description**: This project explored regions around the world which have high volumes of earthquakes and their location to nuclear power plants. Due to data limitations, it was not possible to make a further in-depth analysis of the results. Various datasets were used in this project including the [GEM Science Tools](https://github.com/GEMScienceTools/gem-global-active-faults/tree/master/shapefile), and the [United States Geological Survey Database](https://earthquake.usgs.gov/earthquakes/search/). The full description of data sources is available in the overview section. 
+- **Technologies**: `QGIS` and `Open Street Map Quick extension`.
+
+
+
 rmarkdown::render("project.rmd")
 
