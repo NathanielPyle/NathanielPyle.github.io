@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Machine Learning Models on Nathaniel Pyle</title>
+    <link>https://nathanielpyle.github.io/tags/machine-learning-models/</link>
+    <description>Recent content in Machine Learning Models on Nathaniel Pyle</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 06 Dec 2025 17:08:41 +1300</lastBuildDate>
+    <atom:link href="https://nathanielpyle.github.io/tags/machine-learning-models/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Breast Cancer Wisconsin Diagnostic Dataset</title>
+      <link>https://nathanielpyle.github.io/projects/cancer/</link>
+      <pubDate>Sat, 06 Dec 2025 17:08:41 +1300</pubDate>
+      <guid>https://nathanielpyle.github.io/projects/cancer/</guid>
+      <description>Using Exploratory Data Analysis and machine learning models, this project analysed the Breast Cancer Wisconsin (Diagnostic) dataset to identify the variables most strongly associated with diagnosis.</description>
+    </item>
+  </channel>
+</rss>

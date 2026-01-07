@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=/fav.png type="image/gif">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+<meta property="og:url" content="https://nathanielpyle.github.io/projects/cancer/">
+  <meta property="og:site_name" content="Nathaniel Pyle">
+  <meta property="og:title" content="Breast Cancer Wisconsin Diagnostic Dataset">
+  <meta property="og:description" content="Using Exploratory Data Analysis and machine learning models, this project analysed the Breast Cancer Wisconsin (Diagnostic) dataset to identify the variables most strongly associated with diagnosis.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="projects">
+    <meta property="article:published_time" content="2025-12-06T17:08:41+13:00">
+    <meta property="article:modified_time" content="2025-12-06T17:08:41+13:00">
+    <meta property="article:tag" content="R">
+    <meta property="article:tag" content="Machine Learning Models">
+    <meta property="article:tag" content="Data Visualisation">
+    <meta property="article:tag" content="EDA">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Breast Cancer Wisconsin Diagnostic Dataset">
+  <meta name="twitter:description" content="Using Exploratory Data Analysis and machine learning models, this project analysed the Breast Cancer Wisconsin (Diagnostic) dataset to identify the variables most strongly associated with diagnosis.">
+
+
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --text-link-color: #007bff;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #007bff;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --text-link-color-dark: #ffffff;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        height: 0px;
+        width: 8px;
+        background-color: var(--background-color);
+    }
+
+    ::-webkit-scrollbar-track {
+        border-radius: 1rem;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background: #b0b0b0;
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+
+
+<meta name="description" content="">
+<link rel="stylesheet" href="/css/single.css">
+
+
+<script defer src="/fontawesome-6/all-6.4.2.js"></script>
+
+
+  
+  
+
+  <title>
+Breast Cancer Wisconsin Diagnostic Dataset | Nathaniel Pyle
+
+  </title>
+</head>
+
+<body class="light">
+  
+  
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.documentElement.classList.add('dark');
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            document.documentElement.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.documentElement.classList.add('dark');
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
+
+
+
+
+
+<header id="profileHeader">
+    <nav class="pt-3 navbar navbar-expand-lg ">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="/">
+                
+                
+                
+            </a>
+
+            
+                <div>
+                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder='Ctrl &#43; k to Search...'
+                        aria-label="Search" oninput="searchOnChange(event)">
+                </div>
+            
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+                        <li class="nav-item navbar-text d-block d-md-none">
+                            <div class="nav-link">
+                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder='Ctrl &#43; k to Search...' aria-label="Search" oninput="searchOnChange(event)">
+                            </div>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/" title="">
+                            
+                            Home
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/projects/" title="">
+                            
+                            Projects
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/about/" title="">
+                            
+                            About
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/contact/" title="">
+                            
+                            Contact
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/resume/" title="">
+                            
+                            Resume
+                        </a>
+                    </li>
+                    
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+<section id="single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-9">
+        <div class="pr-lg-4">
+          <div class="title mb-5">
+            <h1 class="text-center mb-4">Breast Cancer Wisconsin Diagnostic Dataset</h1>
+            <div class="text-center">
+              
+                Nathaniel
+                <small>|</small>
+              
+              Dec 6, 2025
+
+              
+              <span id="readingTime">
+                min read
+              </span>
+              
+            </div>
+          </div>
+          
+          <article class="page-content  p-2">
+          <h2 id="overview">Overview</h2>
+<ul>
+<li><strong>Description</strong>: The purpose of this project was to explore the Breast Cancer Wisconsin (Diagnostic) dataset, available from the <a href="http://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic">UC Irvine Machine Learning Repository</a>. Through the use of Exploratory Data Analysis (EDA) and machine learning models, this project aimed to gain a basic understanding of which variables were most important in determining whether cancer was malignant or benign.</li>
+</ul>
+<p><strong>Data Sources</strong></p>
+<p>The Breast Cancer Wisconsin (Diagnostic) dataset was limited, containing only 569 cases and 30 variables.</p>
+<p>The EDA and machine learning models used in this project included correlation matrices, Linear Discriminant Analysis (LDA), Quadratic Discriminant Analysis (QDA), and Principal Component Analysis (PCA).</p>
+<p>LDA and QDA, two binary classification models used in machine learning, were used specifically to identify key variables. In addition, PCA was used to gain a more in-depth understanding of the importance of certain variables.</p>
+<hr>
+<h2 id="methodology">Methodology</h2>
+<ul>
+<li><strong>Technologies</strong>: Various packages were used throughout this project, including <code>corrplot</code>, <code>readODS</code>, <code>dplyr</code>, <code>tidyverse</code>, <code>MASS</code>, and <code>ggplot2</code>.</li>
+</ul>
+<h3 id="data-preprocessing">Data Preprocessing</h3>
+<p>The &lsquo;ID&rsquo; variable was removed as it did not provide additional benefit to the analysis. The diagnosis column was converted into a binary variable and renamed &lsquo;cancer&rsquo;, where malignant cases were classified as 1 and benign cases as 0. The original &lsquo;Diagnosis&rsquo; column was then removed from the data frames.</p>
+<p>&lsquo;Cancer&rsquo; was used as the dependent variable for the EDA and machine learning processes and was compared against the remaining variables.</p>
+<h3 id="correlation-matrix-methods">Correlation Matrix Methods</h3>
+<p>Correlation matrices were created to identify which variables exhibited the strongest correlations with one another.</p>
+<h3 id="lda-and-qda-methods">LDA and QDA Methods</h3>
+<p>To perform LDA, the variables were scaled to have a mean of 0 and a standard deviation of 1. The means and standard deviations of the scaled variables were then computed.</p>
+<p>For both LDA and QDA, the data was split into 70% for training and 30% for testing. The model was trained using the 70% partition, with &lsquo;cancer&rsquo; as the response variable, and was then tested on the 30% partition. Accuracy was calculated by comparing predicted class labels with actual class labels.</p>
+<p>QDA followed similar procedures, with the exception that the variables were not scaled and their means and standard deviations were not computed. The QDA model also used a 70% training partition and a 30% testing partition.</p>
+<h3 id="principal-component-analysis-methods">Principal Component Analysis Methods</h3>
+<p>PCA involved scaling the variables in the same manner as LDA. The resulting scores and loadings were multiplied by -1 to adjust the direction of the principal components. The data was analysed in descending order of explained variance.</p>
+<p>The proportion of variance explained by each principal component was calculated by squaring the standard deviations of the components. These proportions were stored in the variable &lsquo;var_explained&rsquo;.</p>
+<hr>
+<h2 id="results">Results</h2>
+<ul>
+<li><strong>Key Findings</strong>: The correlation matrices revealed significant overlap between variables, resulting in multicollinearity. As a result, LDA, QDA, and PCA provided greater insight and improved interpretability.</li>
+</ul>
+<h3 id="correlation-matrix-results">Correlation Matrix Results</h3>
+<p>When analysing the correlation matrices, variables plotted against themselves along the diagonal resulted in a correlation of 1.0. In the benign correlation matrix, several variables exhibited strong correlations, including &lsquo;compactness&rsquo;, &lsquo;concave points&rsquo;, &lsquo;concavity&rsquo;, and &lsquo;fractal dimension&rsquo;.</p>
+<p>Variables related to similar measurements, such as area and perimeter, also showed strong correlations. The malignant correlation matrix followed a similar pattern, with even stronger relationships observed between variables.</p>
+<h3 id="lda-and-qda-results">LDA and QDA Results</h3>
+<p>Comparing the results of LDA and QDA, both models demonstrated similar training accuracy. LDA achieved an accuracy of 94.5%, while QDA achieved an accuracy of 95.3%. The overall difference in accuracy of 0.8% was minimal.</p>
+<p>Both models showed similar prior probabilities for detecting malignant and benign cases, with approximately 65% classified as benign and 35% as malignant.</p>
+<p>In the LDA model, the mean &lsquo;radius_mean&rsquo; value for malignant cases was -0.5568, while for benign cases it was 0.9787, indicating that &lsquo;radius_mean&rsquo; was higher for malignant cases.</p>
+<p>In terms of coefficients, &lsquo;radius_worst&rsquo; had the largest positive coefficient at 5.7927, strongly influencing classification outcomes. To a lesser extent, &lsquo;perimeter_mean&rsquo; also influenced classification, with a coefficient of 3.7534.</p>
+<p>For QDA, the group mean of &lsquo;radius_mean&rsquo; was 12.1141 for benign cases and 17.12036 for malignant cases, again indicating higher values for malignant cases.</p>
+<p>Other group means, such as &rsquo;texture_mean&rsquo;, were slightly higher for malignant cases (21.60877) compared with benign cases (17.92915). Variables including &lsquo;perimeter_mean&rsquo;, &lsquo;area_mean&rsquo;, and &lsquo;area_se&rsquo; showed particularly large differences between groups.</p>
+<p>Overall, QDA performed slightly better than LDA, suggesting that the data was not perfectly linear. However, the difference in performance was minimal, and further optimisation could improve both models.</p>
+<h3 id="pca-results">PCA Results</h3>
+<p>PCA was used to analyse correlations within the dataset. Unlike correlation matrices, PCA is not susceptible to multicollinearity and is capable of capturing the greatest variation in the data.</p>
+<p>Inspection of the results showed that the first principal component (PC1) accounted for the greatest variation, with the strongest loadings observed for &lsquo;radius_mean&rsquo;, &lsquo;perimeter_mean&rsquo;, and &lsquo;area_mean&rsquo;, with values of 0.2163, 0.2245, and 0.2179 respectively.</p>
+<p>The second principal component (PC2) explained variation not captured by PC1, including &lsquo;smoothness_mean&rsquo; and &lsquo;compactness_mean&rsquo;, with values of 0.1887 and 0.1547. These findings were visualised using a scree plot.</p>
+<hr>
+<h2 id="visualisations">Visualisations</h2>
+<p><strong>Correlation Matrix Benign</strong><br>
+<img src="/images/projects/correlation_matrix_benign.png" alt=""></p>
+<p><strong>Correlation Matrix Malignant</strong><br>
+<img src="/images/projects/correlation_matrix_malignant.png" alt=""></p>
+<p><strong>Scree Plot</strong><br>
+<img src="/images/projects/scree_plot_pca.png" alt=""></p>
+<hr>
+<h2 id="conclusion">Conclusion</h2>
+<ul>
+<li><strong>Takeaways</strong>: The correlation matrices showed that size-based variables exhibited the strongest correlations, despite the presence of multicollinearity when variables were compared against themselves.</li>
+</ul>
+<p>LDA and QDA were used to analyse coefficients and group means for binary classification. QDA slightly outperformed LDA, indicating that the data was not perfectly linear.</p>
+<p>PCA revealed that most variation was explained by the first two principal components, with decreasing variation explained by subsequent components. Overlap between benign and malignant cases was observed in the visualisations.</p>
+<hr>
+<h2 id="references">References</h2>
+<p>Some of the sources used for reference included <a href="https://www.statlearning.com/">An Introduction to Statistical Learning with Applications in R</a>. The code used in this project is available in the following GitHub repository: <a href="https://github.com/NathanielPyle/NathanielPyle.github.io">Nathaniel Pyle</a>.</p>
+<hr>
+<h2 id="citation">Citation</h2>
+<p>The following citation and acknowledgements are made to the original creators of this dataset.</p>
+<p>Dr. William H. Wolberg, General Surgery Dept., University of Wisconsin, Clinical Sciences Center, Madison, WI 53792<br>
+<a href="mailto:wolberg@eagle.surgery.wisc.edu">wolberg@eagle.surgery.wisc.edu</a></p>
+<p>W. Nick Street, Computer Sciences Dept., University of Wisconsin, 1210 West Dayton St., Madison, WI 53706<br>
+<a href="mailto:street@cs.wisc.edu">street@cs.wisc.edu</a>, 608-262-6619</p>
+<p>Olvi L. Mangasarian, Computer Sciences Dept., University of Wisconsin, 1210 West Dayton St., Madison, WI 53706<br>
+<a href="mailto:olvi@cs.wisc.edu">olvi@cs.wisc.edu</a></p>
+
+          </article>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-3">
+        <div id="stickySideBar" class="sticky-sidebar">
+          
+          <aside class="toc">
+              <h5>
+                Table Of Contents
+              </h5>
+              <div class="toc-content">
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#methodology">Methodology</a>
+      <ul>
+        <li><a href="#data-preprocessing">Data Preprocessing</a></li>
+        <li><a href="#correlation-matrix-methods">Correlation Matrix Methods</a></li>
+        <li><a href="#lda-and-qda-methods">LDA and QDA Methods</a></li>
+        <li><a href="#principal-component-analysis-methods">Principal Component Analysis Methods</a></li>
+      </ul>
+    </li>
+    <li><a href="#results">Results</a>
+      <ul>
+        <li><a href="#correlation-matrix-results">Correlation Matrix Results</a></li>
+        <li><a href="#lda-and-qda-results">LDA and QDA Results</a></li>
+        <li><a href="#pca-results">PCA Results</a></li>
+      </ul>
+    </li>
+    <li><a href="#visualisations">Visualisations</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+    <li><a href="#references">References</a></li>
+    <li><a href="#citation">Citation</a></li>
+  </ul>
+</nav>
+              </div>
+          </aside>
+          
+
+          
+          <aside class="tags">
+            <h5>Tags</h5>
+            <ul class="tags-ul list-unstyled list-inline">
+              
+              <li class="list-inline-item"><a href="https://nathanielpyle.github.io/tags/r"
+                target="_blank"
+              >R</a></li>
+              
+              <li class="list-inline-item"><a href="https://nathanielpyle.github.io/tags/machine-learning-models"
+                target="_blank"
+              >Machine Learning Models</a></li>
+              
+              <li class="list-inline-item"><a href="https://nathanielpyle.github.io/tags/data-visualisation"
+                target="_blank"
+              >Data Visualisation</a></li>
+              
+              <li class="list-inline-item"><a href="https://nathanielpyle.github.io/tags/eda"
+                target="_blank"
+              >EDA</a></li>
+              
+            </ul>
+          </aside>
+          
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
+        
+      </div>
+    </div>
+  </div>
+  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+    <i class="fas fa-angle-up"></i>
+  </button>
+</section>
+
+
+<div class="progress">
+  <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<Script src="/js/scrollProgressBar.js"></script>
+
+
+<script>
+  var topScroll = document.getElementById("topScroll");
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      topScroll.style.display = "block";
+    } else {
+      topScroll.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
+  
+  let stickySideBarElem = document.getElementById("stickySideBar");
+  let stickyNavBar =  false ;
+  if(stickyNavBar) {
+    let headerElem = document.getElementById("profileHeader");
+    let headerHeight = headerElem.offsetHeight + 15;
+    stickySideBarElem.style.top = headerHeight + "px";
+  } else {
+    stickySideBarElem.style.top = "50px";
+  }
+</script>
+
+
+<script src="/js/readingTime.js"></script>
+
+
+
+  </div><footer>
+    
+ 
+
+<div class="text-center pt-2">
+    
+
+    
+
+    
+
+    
+
+    
+</div><div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            
+            &copy; 2026  All Rights Reserved
+            <div class="text-secondary">
+                Made with
+                <span class="text-danger">
+                    &#10084;
+                </span>
+                and
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.documentElement.classList.add('dark');
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+        document.documentElement.classList.remove('dark');
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.classList.add('dark');
+        document.body.classList.add('dark');
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            document.documentElement.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+    <script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
+
+</html>

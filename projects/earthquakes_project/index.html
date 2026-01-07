@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=/fav.png type="image/gif">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+<meta property="og:url" content="https://nathanielpyle.github.io/projects/earthquakes_project/">
+  <meta property="og:site_name" content="Nathaniel Pyle">
+  <meta property="og:title" content="Top Ten Earthquakes of 2024 and Nuclear Power Stations">
+  <meta property="og:description" content="Through the use of QGIS, the ten largest earthquakes from 2024 were analysed and compared geospatially against Nuclear Power Stations around the world.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="projects">
+    <meta property="article:published_time" content="2025-12-06T17:08:41+13:00">
+    <meta property="article:modified_time" content="2025-12-06T17:08:41+13:00">
+    <meta property="article:tag" content="QGIS">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Top Ten Earthquakes of 2024 and Nuclear Power Stations">
+  <meta name="twitter:description" content="Through the use of QGIS, the ten largest earthquakes from 2024 were analysed and compared geospatially against Nuclear Power Stations around the world.">
+
+
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --text-link-color: #007bff;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #007bff;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --text-link-color-dark: #ffffff;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        height: 0px;
+        width: 8px;
+        background-color: var(--background-color);
+    }
+
+    ::-webkit-scrollbar-track {
+        border-radius: 1rem;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background: #b0b0b0;
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+
+
+<meta name="description" content="">
+<link rel="stylesheet" href="/css/single.css">
+
+
+<script defer src="/fontawesome-6/all-6.4.2.js"></script>
+
+
+  
+  
+
+  <title>
+Top Ten Earthquakes of 2024 and Nuclear Power Stations | Nathaniel Pyle
+
+  </title>
+</head>
+
+<body class="light">
+  
+  
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.documentElement.classList.add('dark');
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            document.documentElement.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.documentElement.classList.add('dark');
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
+
+
+
+
+
+<header id="profileHeader">
+    <nav class="pt-3 navbar navbar-expand-lg ">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="/">
+                
+                
+                
+            </a>
+
+            
+                <div>
+                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder='Ctrl &#43; k to Search...'
+                        aria-label="Search" oninput="searchOnChange(event)">
+                </div>
+            
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+                        <li class="nav-item navbar-text d-block d-md-none">
+                            <div class="nav-link">
+                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder='Ctrl &#43; k to Search...' aria-label="Search" oninput="searchOnChange(event)">
+                            </div>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/" title="">
+                            
+                            Home
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/projects/" title="">
+                            
+                            Projects
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/about/" title="">
+                            
+                            About
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/contact/" title="">
+                            
+                            Contact
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/resume/" title="">
+                            
+                            Resume
+                        </a>
+                    </li>
+                    
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+<section id="single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-9">
+        <div class="pr-lg-4">
+          <div class="title mb-5">
+            <h1 class="text-center mb-4">Top Ten Earthquakes of 2024 and Nuclear Power Stations</h1>
+            <div class="text-center">
+              
+                Nathaniel
+                <small>|</small>
+              
+              Dec 6, 2025
+
+              
+              <span id="readingTime">
+                min read
+              </span>
+              
+            </div>
+          </div>
+          
+          <article class="page-content  p-2">
+          <h2 id="overview">Overview</h2>
+<ul>
+<li><strong>Description</strong>: The focus of this project was to visualise the relationships between Earthquakes and Nuclear Power Plants, uncovering any potential dangerous locations. This project was inspired by three events and periods, the 2011 Fukushima Daiichi Nuclear Power Plant disaster where a series of Earthquakes and Tsunami related events caused power outages making the power plant unstable,  the Chernobyl disaster of 1986 where due to a manufacturing defect the power plant became unstable, and the Christchurch 2010-2011 Earthquake period in New Zealand.</li>
+</ul>
+<p>In the last example, despite New Zealand having no nuclear power plants, it can be useful in warning other nations about the possibility of natural events and the effects on public infrastructure such as power outages.</p>
+<p>This project explores the number of Nuclear Power Stations in the world as of 2024, all tectonic fault lines and the top ten strongest earthquakes as per magnitude. To accomplish this, QGIS was implemented along with the use of various data sources including:</p>
+<p><strong>Data Sources</strong></p>
+<ul>
+<li>GEM Active Faults — <a href="https://github.com/GEMScienceTools/gem-global-active-faults/tree/master/shapefile">https://github.com/GEMScienceTools/gem-global-active-faults/tree/master/shapefile</a></li>
+<li>USGS Earthquake Database — <a href="https://earthquake.usgs.gov/earthquakes/search/">https://earthquake.usgs.gov/earthquakes/search/</a></li>
+<li>Natural Earth — <a href="https://www.naturalearthdata.com/downloads/">https://www.naturalearthdata.com/downloads/</a></li>
+<li>QGIS Tutorials by Ujaval Gandhi — <a href="https://www.qgistutorials.com/en/">https://www.qgistutorials.com/en/</a></li>
+<li>OpenStreetMap data via QGIS</li>
+</ul>
+<p>To access .png files/images, please feel free to access the following github account <a href="https://github.com/NathanielPyle/NathanielPyle.github.io">Nathaniel Pyle</a></p>
+<h2 id="limitations">Limitations</h2>
+<p>This data may have been limited due to QGIS  limited capabilities as an open source software along with countries’ privacy laws, especially those countries which deal with nuclear power. This is purely speculative.</p>
+<h2 id="methodology-and-data">Methodology and Data</h2>
+<ul>
+<li><strong>Methodology and data</strong>: Using the desktop version of GGIS 3.34.13 a new project was created with various plugins installed. For more information about the particular processes in this project, please see the tutorials and learning materials link in the above description. The Natural Earth shapefile for <code>ne_10m_land</code> was used to create a <code>Polygon/Multipolygon</code> layer which everything would be built upon. Through the use of the<code>gem_active_faults</code> shapefile, a <code>Line/Multilinestring</code> was used to show all active tectonic fault lines throughout the world.</li>
+</ul>
+<p>The GeoJson file from the United States Geological Survey Database was used to create <code>Point/Pointz</code> on top of this layer. The options used to generate this GeoJson were: 4.5 Magnitude, from 2024-01-01 00:00:00 to 2024-31-12 23:59:59 with all other constraints staying the same. The reason behind leaving all other constraints the same was that these would be filtered later in QGIS and would not influence the results. It is unlikely that a man-made event would cause an earthquake related event that would influence the top values.</p>
+<p>The total number of earthquakes from this period with a magnitude over 4.5 were 6315, where the top 10 strongest earthquakes had a magnitude between 7.0 to 7.5. Each earthquake was labelled, scaled and noted in the ending poster. It should be noted that the scale method was flannery as it seemed the most appropriate out of all possible options.</p>
+<p>In relation to the magnitude values, these were used as the basis of the legend in the poster. Through the use of the Quick QGIS extension, nuclear power stations were searched for using the following query: <code>plant:source</code> = <code>nuclear</code>. This resulted in three layers being added, including: <code>Polygon/Multipolygon</code>,<code>Line/Multilinestring</code> and a <code>Point/Pointz</code>. As this projected only involved nuclear stations and not the territories of nuclear stations, all layers except for the <code>Point/Pointz</code>were removed.</p>
+<p>In addition to this, the project coordinate reference system was changed to <code>WGS 84 / Equal Earth Greenwich</code> to ensure an accurate portrayal of the globe which has a limited accuracy of at best 2 meters as noted in the documentation.</p>
+<p>The labels, colour options and other particular stylistic choices were trialled and tested. These can of course be altered and changed to one&rsquo;s own personal preference. Over the course of this project, these themes were changed and altered to be show the data available.</p>
+<h2 id="results">Results</h2>
+<ul>
+<li><strong>Results</strong>: Analysing the total number of earthquakes in 2024 without nuclear power stations, there are a lot of regions that experience high volume of earthquakes such as Japan, Chile and South East Asian countries such as the Philippines and Indonesia.</li>
+</ul>
+<p>Analysing the high volume of earthquake activities in Asia, and comparing this to the number of nuclear power plants, earthquake activities do not dissuade countries from having nuclear power plants including the Philippines and Japan.</p>
+<p>To improve the findings, data about each nuclear power plant&rsquo;s safety protocols such as backup generators for power outages, fail-safe protocols, and miscellaneous data would improve the findings.</p>
+<h2 id="visualisations">Visualisations</h2>
+<p><strong>2024 Earthquakes and tectonic zones</strong>:
+<img src="/images/projects/earthquakes_powerplant_early_image.png" alt="Early image"></p>
+<p><strong>2024 Earthquakes, nuclear power plants and tectonic zones</strong>:
+<img src="/images/projects/earthquakes_powerplant_nuclearplants.png" alt="Nuclear plants"></p>
+<p><strong>2024 Earthquakes scaled, nuclear power plants and tectonic zones</strong>:
+<img src="/images/projects/earthquakes_powerplant_scaled.png" alt="Scaled map"></p>
+<p><strong>Draft Poster</strong>:
+<img src="/images/projects/earthquakes_powerplant_draft.png" alt="Draft"></p>
+<p><strong>Finished Poster</strong>:
+<img src="/images/projects/earthquakes_powerplant_finished.png" alt="Finished"></p>
+
+          </article>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-3">
+        <div id="stickySideBar" class="sticky-sidebar">
+          
+          <aside class="toc">
+              <h5>
+                Table Of Contents
+              </h5>
+              <div class="toc-content">
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#limitations">Limitations</a></li>
+    <li><a href="#methodology-and-data">Methodology and Data</a></li>
+    <li><a href="#results">Results</a></li>
+    <li><a href="#visualisations">Visualisations</a></li>
+  </ul>
+</nav>
+              </div>
+          </aside>
+          
+
+          
+          <aside class="tags">
+            <h5>Tags</h5>
+            <ul class="tags-ul list-unstyled list-inline">
+              
+              <li class="list-inline-item"><a href="https://nathanielpyle.github.io/tags/qgis"
+                target="_blank"
+              >QGIS</a></li>
+              
+            </ul>
+          </aside>
+          
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
+        
+      </div>
+    </div>
+  </div>
+  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+    <i class="fas fa-angle-up"></i>
+  </button>
+</section>
+
+
+<div class="progress">
+  <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<Script src="/js/scrollProgressBar.js"></script>
+
+
+<script>
+  var topScroll = document.getElementById("topScroll");
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      topScroll.style.display = "block";
+    } else {
+      topScroll.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
+  
+  let stickySideBarElem = document.getElementById("stickySideBar");
+  let stickyNavBar =  false ;
+  if(stickyNavBar) {
+    let headerElem = document.getElementById("profileHeader");
+    let headerHeight = headerElem.offsetHeight + 15;
+    stickySideBarElem.style.top = headerHeight + "px";
+  } else {
+    stickySideBarElem.style.top = "50px";
+  }
+</script>
+
+
+<script src="/js/readingTime.js"></script>
+
+
+
+  </div><footer>
+    
+ 
+
+<div class="text-center pt-2">
+    
+
+    
+
+    
+
+    
+
+    
+</div><div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            
+            &copy; 2026  All Rights Reserved
+            <div class="text-secondary">
+                Made with
+                <span class="text-danger">
+                    &#10084;
+                </span>
+                and
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.documentElement.classList.add('dark');
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+        document.documentElement.classList.remove('dark');
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.classList.add('dark');
+        document.body.classList.add('dark');
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            document.documentElement.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+    <script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Seaborn on Nathaniel Pyle</title>
+    <link>https://nathanielpyle.github.io/tags/seaborn/</link>
+    <description>Recent content in Seaborn on Nathaniel Pyle</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 06 Dec 2025 17:08:56 +1300</lastBuildDate>
+    <atom:link href="https://nathanielpyle.github.io/tags/seaborn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Titanic Survival Project</title>
+      <link>https://nathanielpyle.github.io/projects/titanic_project/</link>
+      <pubDate>Sat, 06 Dec 2025 17:08:56 +1300</pubDate>
+      <guid>https://nathanielpyle.github.io/projects/titanic_project/</guid>
+      <description>This project explores Titanic survival patterns using EDA and visualisations, focusing on age, class, fare, and sex.</description>
+    </item>
+    <item>
+      <title>Palmer Penguin Dataset</title>
+      <link>https://nathanielpyle.github.io/projects/penguins_project/</link>
+      <pubDate>Sat, 06 Dec 2025 17:08:52 +1300</pubDate>
+      <guid>https://nathanielpyle.github.io/projects/penguins_project/</guid>
+      <description>This project involved Exploratory Data Analysis and visualisation of the Palmer Penguins dataset using Python libraries including Pandas, Matplotlib, and Seaborn.</description>
+    </item>
+  </channel>
+</rss>

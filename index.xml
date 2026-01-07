@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on Nathaniel Pyle</title>
+    <link>https://nathanielpyle.github.io/</link>
+    <description>Recent content in Home on Nathaniel Pyle</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 30 Dec 2025 19:07:07 +1300</lastBuildDate>
+    <atom:link href="https://nathanielpyle.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Contact</title>
+      <link>https://nathanielpyle.github.io/contact/</link>
+      <pubDate>Tue, 30 Dec 2025 19:07:07 +1300</pubDate>
+      <guid>https://nathanielpyle.github.io/contact/</guid>
+      <description>&lt;h2 id=&#34;get-in-touch&#34;&gt;Get in touch&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Email:&lt;/strong&gt; &lt;a href=&#34;mailto:nathaniel.pyle110@gmail.com&#34;&gt;nathaniel.pyle110@gmail.com&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;LinkedIn:&lt;/strong&gt; &lt;a href=&#34;https://www.linkedin.com/in/nathaniel-pyle-29a91a253&#34;&gt;https://www.linkedin.com/in/nathaniel-pyle-29a91a253&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;GitHub:&lt;/strong&gt; &lt;a href=&#34;https://github.com/NathanielPyle&#34;&gt;https://github.com/NathanielPyle&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Titanic Survival Project</title>
+      <link>https://nathanielpyle.github.io/projects/titanic_project/</link>
+      <pubDate>Sat, 06 Dec 2025 17:08:56 +1300</pubDate>
+      <guid>https://nathanielpyle.github.io/projects/titanic_project/</guid>
+      <description>This project explores Titanic survival patterns using EDA and visualisations, focusing on age, class, fare, and sex.</description>
+    </item>
+    <item>
+      <title>Palmer Penguin Dataset</title>
+      <link>https://nathanielpyle.github.io/projects/penguins_project/</link>
+      <pubDate>Sat, 06 Dec 2025 17:08:52 +1300</pubDate>
+      <guid>https://nathanielpyle.github.io/projects/penguins_project/</guid>
+      <description>This project involved Exploratory Data Analysis and visualisation of the Palmer Penguins dataset using Python libraries including Pandas, Matplotlib, and Seaborn.</description>
+    </item>
+    <item>
+      <title>Breast Cancer Wisconsin Diagnostic Dataset</title>
+      <link>https://nathanielpyle.github.io/projects/cancer/</link>
+      <pubDate>Sat, 06 Dec 2025 17:08:41 +1300</pubDate>
+      <guid>https://nathanielpyle.github.io/projects/cancer/</guid>
+      <description>Using Exploratory Data Analysis and machine learning models, this project analysed the Breast Cancer Wisconsin (Diagnostic) dataset to identify the variables most strongly associated with diagnosis.</description>
+    </item>
+    <item>
+      <title>Top Ten Earthquakes of 2024 and Nuclear Power Stations</title>
+      <link>https://nathanielpyle.github.io/projects/earthquakes_project/</link>
+      <pubDate>Sat, 06 Dec 2025 17:08:41 +1300</pubDate>
+      <guid>https://nathanielpyle.github.io/projects/earthquakes_project/</guid>
+      <description>Through the use of QGIS, the ten largest earthquakes from 2024 were analysed and compared geospatially against Nuclear Power Stations around the world.</description>
+    </item>
+    <item>
+      <title>Resume</title>
+      <link>https://nathanielpyle.github.io/resume/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://nathanielpyle.github.io/resume/</guid>
+      <description>&lt;p&gt;Download my resume &lt;a href=&#34;https://nathanielpyle.github.io/NathanielPyleCurriculumVitae.pdf&#34;&gt;Nathaniel Pyle – CV (PDF)&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

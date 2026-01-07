@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>QGIS on Nathaniel Pyle</title>
+    <link>https://nathanielpyle.github.io/tags/qgis/</link>
+    <description>Recent content in QGIS on Nathaniel Pyle</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 06 Dec 2025 17:08:41 +1300</lastBuildDate>
+    <atom:link href="https://nathanielpyle.github.io/tags/qgis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Top Ten Earthquakes of 2024 and Nuclear Power Stations</title>
+      <link>https://nathanielpyle.github.io/projects/earthquakes_project/</link>
+      <pubDate>Sat, 06 Dec 2025 17:08:41 +1300</pubDate>
+      <guid>https://nathanielpyle.github.io/projects/earthquakes_project/</guid>
+      <description>Through the use of QGIS, the ten largest earthquakes from 2024 were analysed and compared geospatially against Nuclear Power Stations around the world.</description>
+    </item>
+  </channel>
+</rss>

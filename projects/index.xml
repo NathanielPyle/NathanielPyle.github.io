@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Nathaniel Pyle</title>
+    <link>https://nathanielpyle.github.io/projects/</link>
+    <description>Recent content in Projects on Nathaniel Pyle</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 06 Dec 2025 17:08:56 +1300</lastBuildDate>
+    <atom:link href="https://nathanielpyle.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Titanic Survival Project</title>
+      <link>https://nathanielpyle.github.io/projects/titanic_project/</link>
+      <pubDate>Sat, 06 Dec 2025 17:08:56 +1300</pubDate>
+      <guid>https://nathanielpyle.github.io/projects/titanic_project/</guid>
+      <description>This project explores Titanic survival patterns using EDA and visualisations, focusing on age, class, fare, and sex.</description>
+    </item>
+    <item>
+      <title>Palmer Penguin Dataset</title>
+      <link>https://nathanielpyle.github.io/projects/penguins_project/</link>
+      <pubDate>Sat, 06 Dec 2025 17:08:52 +1300</pubDate>
+      <guid>https://nathanielpyle.github.io/projects/penguins_project/</guid>
+      <description>This project involved Exploratory Data Analysis and visualisation of the Palmer Penguins dataset using Python libraries including Pandas, Matplotlib, and Seaborn.</description>
+    </item>
+    <item>
+      <title>Breast Cancer Wisconsin Diagnostic Dataset</title>
+      <link>https://nathanielpyle.github.io/projects/cancer/</link>
+      <pubDate>Sat, 06 Dec 2025 17:08:41 +1300</pubDate>
+      <guid>https://nathanielpyle.github.io/projects/cancer/</guid>
+      <description>Using Exploratory Data Analysis and machine learning models, this project analysed the Breast Cancer Wisconsin (Diagnostic) dataset to identify the variables most strongly associated with diagnosis.</description>
+    </item>
+    <item>
+      <title>Top Ten Earthquakes of 2024 and Nuclear Power Stations</title>
+      <link>https://nathanielpyle.github.io/projects/earthquakes_project/</link>
+      <pubDate>Sat, 06 Dec 2025 17:08:41 +1300</pubDate>
+      <guid>https://nathanielpyle.github.io/projects/earthquakes_project/</guid>
+      <description>Through the use of QGIS, the ten largest earthquakes from 2024 were analysed and compared geospatially against Nuclear Power Stations around the world.</description>
+    </item>
+  </channel>
+</rss>

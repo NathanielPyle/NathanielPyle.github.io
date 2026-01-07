@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Nathaniel Pyle</title>
+    <link>https://nathanielpyle.github.io/tags/</link>
+    <description>Recent content in Tags on Nathaniel Pyle</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 06 Dec 2025 17:08:56 +1300</lastBuildDate>
+    <atom:link href="https://nathanielpyle.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Matplotlib</title>
+      <link>https://nathanielpyle.github.io/tags/matplotlib/</link>
+      <pubDate>Sat, 06 Dec 2025 17:08:56 +1300</pubDate>
+      <guid>https://nathanielpyle.github.io/tags/matplotlib/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Numpy</title>
+      <link>https://nathanielpyle.github.io/tags/numpy/</link>
+      <pubDate>Sat, 06 Dec 2025 17:08:56 +1300</pubDate>
+      <guid>https://nathanielpyle.github.io/tags/numpy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pandas</title>
+      <link>https://nathanielpyle.github.io/tags/pandas/</link>
+      <pubDate>Sat, 06 Dec 2025 17:08:56 +1300</pubDate>
+      <guid>https://nathanielpyle.github.io/tags/pandas/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>https://nathanielpyle.github.io/tags/python/</link>
+      <pubDate>Sat, 06 Dec 2025 17:08:56 +1300</pubDate>
+      <guid>https://nathanielpyle.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Seaborn</title>
+      <link>https://nathanielpyle.github.io/tags/seaborn/</link>
+      <pubDate>Sat, 06 Dec 2025 17:08:56 +1300</pubDate>
+      <guid>https://nathanielpyle.github.io/tags/seaborn/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Data Visualisation</title>
+      <link>https://nathanielpyle.github.io/tags/data-visualisation/</link>
+      <pubDate>Sat, 06 Dec 2025 17:08:41 +1300</pubDate>
+      <guid>https://nathanielpyle.github.io/tags/data-visualisation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>EDA</title>
+      <link>https://nathanielpyle.github.io/tags/eda/</link>
+      <pubDate>Sat, 06 Dec 2025 17:08:41 +1300</pubDate>
+      <guid>https://nathanielpyle.github.io/tags/eda/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Machine Learning Models</title>
+      <link>https://nathanielpyle.github.io/tags/machine-learning-models/</link>
+      <pubDate>Sat, 06 Dec 2025 17:08:41 +1300</pubDate>
+      <guid>https://nathanielpyle.github.io/tags/machine-learning-models/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>QGIS</title>
+      <link>https://nathanielpyle.github.io/tags/qgis/</link>
+      <pubDate>Sat, 06 Dec 2025 17:08:41 +1300</pubDate>
+      <guid>https://nathanielpyle.github.io/tags/qgis/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>R</title>
+      <link>https://nathanielpyle.github.io/tags/r/</link>
+      <pubDate>Sat, 06 Dec 2025 17:08:41 +1300</pubDate>
+      <guid>https://nathanielpyle.github.io/tags/r/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
