@@ -6,8 +6,22 @@
     <description>Recent content in Tags on Nathaniel Pyle</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 06 Dec 2025 17:08:56 +1300</lastBuildDate>
+    <lastBuildDate>Sat, 10 Jan 2026 08:26:49 +0000</lastBuildDate>
     <atom:link href="https://nathanielpyle.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data Visualisation</title>
+      <link>https://nathanielpyle.github.io/tags/data-visualisation/</link>
+      <pubDate>Sat, 10 Jan 2026 08:26:49 +0000</pubDate>
+      <guid>https://nathanielpyle.github.io/tags/data-visualisation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tableau</title>
+      <link>https://nathanielpyle.github.io/tags/tableau/</link>
+      <pubDate>Sat, 10 Jan 2026 08:26:49 +0000</pubDate>
+      <guid>https://nathanielpyle.github.io/tags/tableau/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Matplotlib</title>
       <link>https://nathanielpyle.github.io/tags/matplotlib/</link>
@@ -44,17 +58,17 @@
       <description></description>
     </item>
     <item>
-      <title>Data Visualisation</title>
-      <link>https://nathanielpyle.github.io/tags/data-visualisation/</link>
-      <pubDate>Sat, 06 Dec 2025 17:08:41 +1300</pubDate>
-      <guid>https://nathanielpyle.github.io/tags/data-visualisation/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>EDA</title>
       <link>https://nathanielpyle.github.io/tags/eda/</link>
       <pubDate>Sat, 06 Dec 2025 17:08:41 +1300</pubDate>
       <guid>https://nathanielpyle.github.io/tags/eda/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Geospatial Analysis</title>
+      <link>https://nathanielpyle.github.io/tags/geospatial-analysis/</link>
+      <pubDate>Sat, 06 Dec 2025 17:08:41 +1300</pubDate>
+      <guid>https://nathanielpyle.github.io/tags/geospatial-analysis/</guid>
       <description></description>
     </item>
     <item>
