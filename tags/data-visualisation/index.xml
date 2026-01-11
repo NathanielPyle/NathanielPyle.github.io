@@ -9,11 +9,25 @@
     <lastBuildDate>Sat, 10 Jan 2026 08:26:49 +0000</lastBuildDate>
     <atom:link href="https://nathanielpyle.github.io/tags/data-visualisation/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Car Incidents in New Zealand Between 2000-2025 from NZTA Dashboard</title>
+      <title>Traffic Incidents in New Zealand Between 2000-2025 from NZTA Dashboard</title>
       <link>https://nathanielpyle.github.io/projects/traffic_incidents/</link>
       <pubDate>Sat, 10 Jan 2026 08:26:49 +0000</pubDate>
       <guid>https://nathanielpyle.github.io/projects/traffic_incidents/</guid>
       <description>Using the Crash Analysis System (CAS) data, from the Waka Kotahi | NZ Transport Agency (NZTA) website, traffic accidents reported by the police on New Zealand key holiday periods were visualised using Tableau Public.</description>
+    </item>
+    <item>
+      <title>Titanic Survival Project</title>
+      <link>https://nathanielpyle.github.io/projects/titanic_project/</link>
+      <pubDate>Sat, 06 Dec 2025 17:08:56 +1300</pubDate>
+      <guid>https://nathanielpyle.github.io/projects/titanic_project/</guid>
+      <description>This project explores Titanic survival patterns using EDA and visualisations, focusing on age, class, fare, and sex.</description>
+    </item>
+    <item>
+      <title>Palmer Penguin Dataset</title>
+      <link>https://nathanielpyle.github.io/projects/penguins_project/</link>
+      <pubDate>Sat, 06 Dec 2025 17:08:52 +1300</pubDate>
+      <guid>https://nathanielpyle.github.io/projects/penguins_project/</guid>
+      <description>This project involved Exploratory Data Analysis and visualisation of the Palmer Penguins dataset using Python libraries including Pandas, Matplotlib, and Seaborn.</description>
     </item>
     <item>
       <title>Breast Cancer Wisconsin Diagnostic Dataset</title>

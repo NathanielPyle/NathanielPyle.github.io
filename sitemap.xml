@@ -2,9 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://nathanielpyle.github.io/projects/traffic_incidents/</loc>
-    <lastmod>2026-01-10T08:26:49+00:00</lastmod>
-  </url><url>
     <loc>https://nathanielpyle.github.io/tags/data-visualisation/</loc>
     <lastmod>2026-01-10T08:26:49+00:00</lastmod>
   </url><url>
@@ -15,6 +12,9 @@
     <lastmod>2026-01-10T08:26:49+00:00</lastmod>
   </url><url>
     <loc>https://nathanielpyle.github.io/tags/</loc>
+    <lastmod>2026-01-10T08:26:49+00:00</lastmod>
+  </url><url>
+    <loc>https://nathanielpyle.github.io/projects/traffic_incidents/</loc>
     <lastmod>2026-01-10T08:26:49+00:00</lastmod>
   </url><url>
     <loc>https://nathanielpyle.github.io/</loc>

@@ -30,7 +30,7 @@
 
 <meta property="og:url" content="https://nathanielpyle.github.io/projects/traffic_incidents/">
   <meta property="og:site_name" content="Nathaniel Pyle">
-  <meta property="og:title" content="Car Incidents in New Zealand Between 2000-2025 from NZTA Dashboard">
+  <meta property="og:title" content="Traffic Incidents in New Zealand Between 2000-2025 from NZTA Dashboard">
   <meta property="og:description" content="Using the Crash Analysis System (CAS) data, from the Waka Kotahi | NZ Transport Agency (NZTA) website, traffic accidents reported by the police on New Zealand key holiday periods were visualised using Tableau Public.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
@@ -42,7 +42,7 @@
 
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Car Incidents in New Zealand Between 2000-2025 from NZTA Dashboard">
+  <meta name="twitter:title" content="Traffic Incidents in New Zealand Between 2000-2025 from NZTA Dashboard">
   <meta name="twitter:description" content="Using the Crash Analysis System (CAS) data, from the Waka Kotahi | NZ Transport Agency (NZTA) website, traffic accidents reported by the police on New Zealand key holiday periods were visualised using Tableau Public.">
 
 
@@ -118,7 +118,7 @@
   
 
   <title>
-Car Incidents in New Zealand Between 2000-2025 from NZTA Dashboard | Nathaniel Pyle
+Traffic Incidents in New Zealand Between 2000-2025 from NZTA Dashboard | Nathaniel Pyle
 
   </title>
 </head>
@@ -292,7 +292,7 @@ Car Incidents in New Zealand Between 2000-2025 from NZTA Dashboard | Nathaniel P
       <div class="col-sm-12 col-md-12 col-lg-9">
         <div class="pr-lg-4">
           <div class="title mb-5">
-            <h1 class="text-center mb-4">Car Incidents in New Zealand Between 2000-2025 from NZTA Dashboard</h1>
+            <h1 class="text-center mb-4">Traffic Incidents in New Zealand Between 2000-2025 from NZTA Dashboard</h1>
             <div class="text-center">
               
                 Nathaniel
@@ -311,30 +311,30 @@ Car Incidents in New Zealand Between 2000-2025 from NZTA Dashboard | Nathaniel P
           <article class="page-content  p-2">
           <h2 id="overview">Overview</h2>
 <ul>
-<li><strong>Description</strong>: The purpose of creating this dashboard was to visualise the frequency of traffic incidents in New Zealand Holiday Periods between January 1st 2000 to where the dataset was last updated on November 25th 2025. The key holiday periods in question are: Christmas-New Years, Easter, Labour Weekend, and the Queen&rsquo;s Birthday.</li>
+<li><strong>Description</strong>: The purpose of creating this dashboard was to visualise the frequency of traffic incidents in New Zealand holiday periods between January 1st 2000 and when the dataset was last updated on November 25th 2025. The key holiday periods in question are Christmas–New Year, Easter, Labour Weekend, and the Queen’s Birthday.</li>
 </ul>
-<p>The Crash Analysis System (CAS) data, is all about traffic crashes reported by the NZTA by the New Zealand Police. CAS covers crashes where the public have legal access with a motor vehicle, not including private roads or jurisdictions.</p>
+<p>The Crash Analysis System (CAS) data is based on traffic crashes reported to the NZTA by the New Zealand Police. CAS covers crashes that occur on roads where the public has legal access by motor vehicle, excluding private roads or jurisdictions.</p>
 <p><strong>Data Sources</strong></p>
 <ul>
 <li>Crash Analysis System (CAS) data — <a href="https://opendata-nzta.opendata.arcgis.com/datasets/NZTA::crash-analysis-system-cas-data-1/about">https://opendata-nzta.opendata.arcgis.com/datasets/NZTA::crash-analysis-system-cas-data-1/about</a></li>
 </ul>
 <h2 id="limitations">Limitations</h2>
-<p>This dataset is continuously being updated on the first week of each month, therefore the results for 2025 are subject to change as they have not been updated as of the 10th January 2026.</p>
-<p>The NZTA, has mentioned that the CAS data is &lsquo;as is, where is&rsquo; basis, removing any libaility for any action taken on the basis of this dataset.</p>
-<p>The variables in the dataset are formatted for analytical use, where this can result in attribute charts that may not appear meaningful, and are not suitable for broader analysis or use. The purpose of this project is to visualise these findings, not use them as a direct analysis of the overall data, thus complying with the author&rsquo;s intentions.</p>
+<p>This dataset is continuously updated in the first week of each month; therefore, the results for 2025 are subject to change, as they had not been updated as of 10th January 2026.</p>
+<p>The NZTA has stated that the CAS data is provided on an “as is, where is” basis, removing any liability for actions taken based on this dataset.</p>
+<p>The variables in the dataset are formatted for analytical use, which can result in attribute charts that may not appear meaningful and are not suitable for broader analysis or use. The purpose of this project is to visualise these findings rather than use them for direct analysis of the overall dataset, thus complying with the author’s intentions.</p>
 <h2 id="methodology-and-data">Methodology and Data</h2>
 <ul>
-<li><strong>Methodology and data</strong>: The csv file was extracted and downloaded from the NZTA website. For reference, other data formats were available including Geojson.</li>
+<li><strong>Methodology and data</strong>: The CSV file was extracted and downloaded from the NZTA website. For reference, other data formats were available, including GeoJSON.</li>
 </ul>
-<p>The line plots were generated using &lsquo;Holiday&rsquo; and &lsquo;Crash Year&rsquo; as dimensions, with the &lsquo;Sum Fatal Count&rsquo; and &lsquo;Sum Minor Injury Count&rsquo; as the Measures.
-Holiday&rsquo; was filtered for the purpose of removing N/A values for periods that were not holidays.</p>
-<p>The table summary used &lsquo;Holiday&rsquo; and &lsquo;Crash Severity&rsquo; as the dimensions, excluding the periods that were not holidays. Filters that were used included &lsquo;Crash Severity&rsquo; and &lsquo;Holiday&rsquo;. The &lsquo;Crash Analysis System data&rsquo; was used as the text on the Marks Card.</p>
+<p>The line plots were generated using ‘Holiday’ and ‘Crash Year’ as dimensions, with ‘Sum Fatal Count’ and ‘Sum Minor Injury Count’ as the measures.
+‘Holiday’ was filtered to remove N/A values for periods that were not holidays.</p>
+<p>The table summary used ‘Holiday’ and ‘Crash Severity’ as dimensions, excluding periods that were not holidays. Filters used included ‘Crash Severity’ and ‘Holiday’. The Crash Analysis System data was used as the text on the Marks card.</p>
 <h2 id="results-and-visualisation">Results and Visualisation</h2>
 <ul>
-<li><strong>Results</strong>: From the line plots, the number of Fatal and Minjor Injury Traffic Incidents during the Christmas New Year period has decreased after a spike in 2022. This indicates that for confounding variables and reasons which cannot be discussed as per the author&rsquo;s request, the strategies and implementations of the NZTA, New Zealand Police, and other stakeholders are decreasing the number of road incidents during this time.</li>
+<li><strong>Results</strong>: From the line plots, the number of fatal and minor injury traffic incidents during the Christmas–New Year period has decreased following a spike in 2022. This suggests that, due to confounding variables and reasons that cannot be discussed as per the author’s request, the strategies and implementations of the NZTA, New Zealand Police, and other stakeholders may be contributing to a reduction in road incidents during this period.</li>
 </ul>
-<p>Analysing the line plots, the Minor Injury Traffic Incident plots are less volatile in comparison with the Fatal Traffic Incident plots.</p>
-<p>Christmas-New Years period has the highest number of Fatal and Minor Injury Traffic Incidents, which is to be expected as this is the longest holiday period in New Zealand. Easter is in second place with the highest number of Traffic Incidents, being the second longest holiday period, with Queens Birthday and Labour Weekend having more Non-Injury Crash incidents. As the Queens Birthday and Labour Weekend are similiar in length, and are normally one day holiday periods, this is expected.</p>
+<p>Analysis of the line plots shows that minor injury traffic incidents are less volatile compared with fatal traffic incidents.</p>
+<p>The Christmas–New Year period has the highest number of fatal and minor injury traffic incidents, which is expected as it is the longest holiday period in New Zealand. Easter ranks second for the highest number of traffic incidents, as it is the second-longest holiday period. The Queen’s Birthday and Labour Weekend have higher proportions of non-injury crash incidents. As the Queen’s Birthday and Labour Weekend are similar in length and are typically one-day holiday periods, this outcome is expected.</p>
 <p><strong>Traffic Incidents Dashboard</strong>:
 <img src="/images/projects/traffic_incidents_nz.png" alt="Dashboard"></p>
 
