@@ -39,6 +39,7 @@
     <meta property="article:modified_time" content="2026-01-10T08:26:49+00:00">
     <meta property="article:tag" content="Data Visualisation">
     <meta property="article:tag" content="Tableau">
+    <meta property="article:tag" content="Geospatial Analysis">
 
 
   <meta name="twitter:card" content="summary">
@@ -324,17 +325,19 @@ Traffic Incidents in New Zealand Between 2000-2025 from NZTA Dashboard | Nathani
 <p>The variables in the dataset are formatted for analytical use, which can result in attribute charts that may not appear meaningful and are not suitable for broader analysis or use. The purpose of this project is to visualise these findings rather than use them for direct analysis of the overall dataset, thus complying with the author’s intentions.</p>
 <h2 id="methodology-and-data">Methodology and Data</h2>
 <ul>
-<li><strong>Methodology and data</strong>: The CSV file was extracted and downloaded from the NZTA website. For reference, other data formats were available, including GeoJSON.</li>
+<li><strong>Methodology and data</strong>: The GeoJSON file was extracted and downloaded from the NZTA website as a spatial file. For reference, other data formats were available, including CSV files.</li>
 </ul>
 <p>The line plots were generated using ‘Holiday’ and ‘Crash Year’ as dimensions, with ‘Sum Fatal Count’ and ‘Sum Minor Injury Count’ as the measures.
 ‘Holiday’ was filtered to remove N/A values for periods that were not holidays.</p>
 <p>The table summary used ‘Holiday’ and ‘Crash Severity’ as dimensions, excluding periods that were not holidays. Filters used included ‘Crash Severity’ and ‘Holiday’. The Crash Analysis System data was used as the text on the Marks card.</p>
+<p>The Map Plot was generated using &lsquo;Geometry&rsquo; autogenerating the &lsquo;Latitude&rsquo; and &lsquo;Longitude&rsquo; coordinates on the map. &lsquo;Holiday&rsquo; and &lsquo;Crash Year&rsquo; were used as filters, with &lsquo;Crash Year&rsquo; being specifically filtered for years from 2020-2025. &lsquo;crashLocation1&rsquo; and &lsquo;crashLocation2&rsquo; were used as labels on the Marks card, along with &lsquo;Crash Year&rsquo; being selected as Colour and &lsquo;Geometry&rsquo; automatically being assigned as Detail.</p>
 <h2 id="results-and-visualisation">Results and Visualisation</h2>
 <ul>
 <li><strong>Results</strong>: From the line plots, the number of fatal and minor injury traffic incidents during the Christmas–New Year period has decreased following a spike in 2022. This suggests that, due to confounding variables and reasons that cannot be discussed as per the author’s request, the strategies and implementations of the NZTA, New Zealand Police, and other stakeholders may be contributing to a reduction in road incidents during this period.</li>
 </ul>
 <p>Analysis of the line plots shows that minor injury traffic incidents are less volatile compared with fatal traffic incidents.</p>
 <p>The Christmas–New Year period has the highest number of fatal and minor injury traffic incidents, which is expected as it is the longest holiday period in New Zealand. Easter ranks second for the highest number of traffic incidents, as it is the second-longest holiday period. The Queen’s Birthday and Labour Weekend have higher proportions of non-injury crash incidents. As the Queen’s Birthday and Labour Weekend are similar in length and are typically one-day holiday periods, this outcome is expected.</p>
+<p>Analysing the Map Plot, it is evident that there were more traffic incidents from the early 2020&rsquo;s in comparison to periods closer to 2025. This is especially true for the Auckland and Northland regions. In comparison, regions in the South Island have fewer traffic incidents and are easily identifiable and less clustered.</p>
 <p><strong>Traffic Incidents Dashboard</strong>:
 <img src="/images/projects/traffic_incidents_nz.png" alt="Dashboard"></p>
 
@@ -373,6 +376,10 @@ Traffic Incidents in New Zealand Between 2000-2025 from NZTA Dashboard | Nathani
               <li class="list-inline-item"><a href="https://nathanielpyle.github.io/tags/tableau"
                 target="_blank"
               >Tableau</a></li>
+              
+              <li class="list-inline-item"><a href="https://nathanielpyle.github.io/tags/geospatial-analysis"
+                target="_blank"
+              >Geospatial Analysis</a></li>
               
             </ul>
           </aside>
