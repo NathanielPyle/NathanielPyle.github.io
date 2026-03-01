@@ -30,8 +30,8 @@
 
 <meta property="og:url" content="https://nathanielpyle.github.io/projects/unicef_obesity_children/">
   <meta property="og:site_name" content="Nathaniel Pyle">
-  <meta property="og:title" content="School-aged Children and Adolescents Nutrition Dashboard">
-  <meta property="og:description" content="Coming soon.">
+  <meta property="og:title" content="Global Childhood and Adolescent Obesity Dashboard, Source: UNICEF Global Database, 2025 release">
+  <meta property="og:description" content="The purpose of this dashboard was to visualise childhood and adolescent obesity rates per Unicef region and country, year, and compare that to the World Income Rates for all Unicef regions using Tableau Public.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="projects">
@@ -42,8 +42,8 @@
 
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="School-aged Children and Adolescents Nutrition Dashboard">
-  <meta name="twitter:description" content="Coming soon.">
+  <meta name="twitter:title" content="Global Childhood and Adolescent Obesity Dashboard, Source: UNICEF Global Database, 2025 release">
+  <meta name="twitter:description" content="The purpose of this dashboard was to visualise childhood and adolescent obesity rates per Unicef region and country, year, and compare that to the World Income Rates for all Unicef regions using Tableau Public.">
 
 
 <link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
@@ -118,7 +118,7 @@
   
 
   <title>
-School-aged Children and Adolescents Nutrition Dashboard | Nathaniel Pyle
+Global Childhood and Adolescent Obesity Dashboard, Source: UNICEF Global Database, 2025 release | Nathaniel Pyle
 
   </title>
 </head>
@@ -292,7 +292,7 @@ School-aged Children and Adolescents Nutrition Dashboard | Nathaniel Pyle
       <div class="col-sm-12 col-md-12 col-lg-9">
         <div class="pr-lg-4">
           <div class="title mb-5">
-            <h1 class="text-center mb-4">School-aged Children and Adolescents Nutrition Dashboard</h1>
+            <h1 class="text-center mb-4">Global Childhood and Adolescent Obesity Dashboard, Source: UNICEF Global Database, 2025 release</h1>
             <div class="text-center">
               
                 Nathaniel
@@ -311,23 +311,33 @@ School-aged Children and Adolescents Nutrition Dashboard | Nathaniel Pyle
           <article class="page-content  p-2">
           <h2 id="overview">Overview</h2>
 <ul>
-<li><strong>Description</strong>:</li>
+<li><strong>Description</strong>: Malnutrition and nutritional deficiencies were the primary focus of global nutrition efforts among children and adolescents prior to 2000. Since 2000, according to UNICEF data sources, there has been a steady decline in childhood and adolescent malnutrition and nutritional deficiencies, but a rapid increase in childhood overweight and obesity rates. This can be attributed to changing dietary patterns throughout the world, resulting in this shift. UNICEF reports that obesity rates have increased by 2.5 times across all age groups, along with other figures available on their website, where the dataset was downloaded from <a href="https://data.unicef.org/topic/nutrition/school-children-adolescents/">Unicef School-aged children and adolescents</a>.</li>
 </ul>
+<p>For reference, the UNICEF regions in question along with their abbreviations are: East Asia and the Pacific, Eastern Europe and Central Asia (EECA), East and Southern Africa (ESA), Latin America and the Caribbean, Middle East and North Africa (MENA), North America (NA), South Asia (SA), West and Central Africa (WCA), and Western Europe (WE).</p>
 <p><strong>Data Sources</strong></p>
 <ul>
-<li></li>
+<li>School-aged children and adolescents dataset — <a href="https://data.unicef.org/topic/nutrition/school-children-adolescents/">https://data.unicef.org/topic/nutrition/school-children-adolescents/</a></li>
 </ul>
+<p>United Nations Children’s Fund, Division of Data, Analysis, Planning and Monitoring. Analysis of data from NCD Risk Factor Collaboration (NCD-RisC), based on worldwide trends in underweight and obesity from 1990 to 2022: a pooled analysis of 3663 population-representative studies with 222 million children, adolescents and adults. The Lancet 2024. DOI: <a href="https://doi.org/10.1016/S0140-6736(23)02750-2">https://doi.org/10.1016/S0140-6736(23)02750-2</a></p>
 <h2 id="limitations">Limitations</h2>
+<p>Based on the journal Worldwide trends in underweight and obesity from 1990 to 2022: a pooled analysis of 3,663 population-representative studies with 222 million children, adolescents, and adults, available from <a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(23)02750-2/fulltext">The Lancet</a>, the study does not explicitly state the sample size for each country and only mentions using representative samples of the general population.</p>
+<p>In relation to different BMI categories, a Bayesian hierarchical model was used to estimate trends. For this dashboard, obesity was categorised as having a BMI ≥ 30.</p>
+<p>The increase in obesity is prevalent in most parts of the world, with the exception of some Southeast Asian and sub-Saharan African regions and countries.</p>
 <h2 id="methodology-and-data">Methodology and Data</h2>
-<ul>
-<li><strong>Methodology and data</strong>:</li>
-</ul>
+<p><strong>Methodology and data</strong>: The ‘Obesity estimates (5–19 years)’ XLSX file was extracted and loaded into Tableau as a Microsoft Excel file. It is important to note that on the UNICEF page, two similar datasets were also available: ‘Overweight estimates (5–19 years)’ and ‘Thinness estimates (5–19 years)’.</p>
+<p>To construct the ‘Countries and Regions with the Highest Adolescent Obesity Rates’ bar chart, ‘UNICEF Regions’ and ‘Countries and areas’ were used as the dimensions, with the ‘2022 Both Sexes Point Estimates’ used as the measure. The filters used were ‘UNICEF Regions’ and ‘Countries and areas’, filtering the top ten countries and regions with the highest adolescent obesity rates. ‘Countries and areas’ was used as colour on the Marks card. ‘UNICEF_Reporting_Sub_Region’ was not selected under the ‘UNICEF Regions’ filter, as the focus was on regions rather than reporting sub-regions.</p>
+<p>The ‘Summary of Average Obesity Rates for UNICEF Regions’ used ‘UNICEF Regions’ as the dimension, with the average ‘Both Sexes Point Estimate’ selected as text on the Marks card.</p>
+<p>‘World Bank Income versus Average UNICEF Regions 2022’ utilised ‘World Bank Income Groups’ and ‘UNICEF Regions’ as dimensions, with ‘2022 Both Sexes Point Estimate’ used as the measure. For filters, ‘World Bank Income Groups’ and ‘UNICEF Regions’ were used, with ‘UNICEF_Reporting_Sub_Region’ excluded. Under the Marks card, ‘UNICEF Regions’ were selected as colour.</p>
+<p>Using an external tool, the ‘Obesity estimates (5–19 years)’ XLSX file was pivoted for the purpose of creating a line plot for ‘Average Obesity Rate among UNICEF Regions from 2000–2022’. ‘Year’ was selected as the dimension, with ‘UNICEF prevalence percent’ selected as the measure. The filters used were ‘Year’ and ‘UNICEF Reporting Sub Region’, with null values excluded. Under the Marks card, ‘UNICEF Reporting Sub Region’ was selected as colour.</p>
 <h2 id="results-and-visualisation">Results and Visualisation</h2>
 <ul>
-<li><strong>Results</strong>:</li>
+<li><strong>Results</strong>: From the ‘Summary of Average Obesity Rates for UNICEF Regions’, the four regions with the highest obesity rates are: Latin America and the Caribbean, East Asia and the Pacific, Middle East and North Africa, and North America. There is only a 2.66% difference between Western Europe and South Asia. East and Southern Africa and West and Central Africa have similar rates, with only a 0.28% difference in obesity prevalence.</li>
 </ul>
-<p><strong>Traffic Incidents Dashboard</strong>:
-![Dashboard]</p>
+<p>Despite Latin America and the Caribbean having the highest regional average obesity rate, several East Asia and the Pacific countries have higher national rates, as shown in the ‘Countries and Regions with the Highest Adolescent Obesity Rates 2022’ bar chart. Nations such as the Cook Islands, Niue, and Nauru have prevalence rates between 30–40%, compared with Latin American and Caribbean countries, which are generally below 30%. This may reflect population size differences, where smaller nations can show higher prevalence percentages despite having fewer absolute cases.</p>
+<p>Analysing the ‘World Bank Income versus Average Obesity in UNICEF Regions 2022’ chart, High Income and Upper Middle Income groups generally show higher obesity prevalence, with some exceptions such as Eastern Europe and Central Asia, Western Europe, East and Southern Africa, and West and Central Africa. For Lower Middle Income and Low Income groups, Latin America and the Caribbean, Middle East and North Africa, and East Asia and the Pacific remain among the most prevalent regions, with South Asia showing lower rates for Low Income groups.</p>
+<p>The time series plot ‘Average Obesity Rate among UNICEF Regions from 2000–2022’ confirms these patterns, with Latin America and the Caribbean, East Asia and the Pacific, and Middle East and North Africa showing the highest growth over time compared with other regions.</p>
+<p><strong>Global Childhood and Adolescent Obesity Dashboard</strong>:
+<img src="/images/projects/unicef_obesity_dashboard.png" alt="Dashboard"></p>
 
           </article>
         </div>

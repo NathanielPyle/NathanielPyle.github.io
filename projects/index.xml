@@ -9,11 +9,11 @@
     <lastBuildDate>Fri, 20 Feb 2026 23:42:16 +1300</lastBuildDate>
     <atom:link href="https://nathanielpyle.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>School-aged Children and Adolescents Nutrition Dashboard</title>
+      <title>Global Childhood and Adolescent Obesity Dashboard, Source: UNICEF Global Database, 2025 release</title>
       <link>https://nathanielpyle.github.io/projects/unicef_obesity_children/</link>
       <pubDate>Fri, 20 Feb 2026 23:42:16 +1300</pubDate>
       <guid>https://nathanielpyle.github.io/projects/unicef_obesity_children/</guid>
-      <description>Coming soon.</description>
+      <description>The purpose of this dashboard was to visualise childhood and adolescent obesity rates per Unicef region and country, year, and compare that to the World Income Rates for all Unicef regions using Tableau Public.</description>
     </item>
     <item>
       <title>Traffic Incidents in New Zealand Between 2000-2025 from NZTA Dashboard</title>
